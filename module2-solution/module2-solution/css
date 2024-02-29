@@ -1,1 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Setting up the container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling the sections */
+.section {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+/* Styling the section title region */
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff9999; /* Unique color for each section title */
+    padding: 5px 10px;
+    border-bottom-left-radius: 5px;
+    font-weight: bold;
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+    .section:last-child {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .section {
+        width: calc(33.3333% - 20px);
+    }
+}
